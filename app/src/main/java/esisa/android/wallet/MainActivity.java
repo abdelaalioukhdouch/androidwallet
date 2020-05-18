@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-
+    // Nv Changement
     ListView lst;
     String[] projectsname={"projet1","projet2","projet3"};
     String[] projectsdesc={"projet1description","projet2description","projet3description"};

@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.sign_in);
 
 
-        Button signupbt = findViewById(R.id.signupbt);
+        Button signupbt = findViewById(R.id.signinbt);
         signupbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

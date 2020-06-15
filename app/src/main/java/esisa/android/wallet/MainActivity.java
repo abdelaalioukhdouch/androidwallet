@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 String pass=edtpass.getText().toString();
                 boolean res=dbInscription.Login(username,pass);
                 if(res==true){
-                    Home();
+                    //Home();
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"Inscrivez-vous",Toast.LENGTH_LONG).show();

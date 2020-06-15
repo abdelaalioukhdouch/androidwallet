@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import androidx.annotation.Nullable;
+
 
 import esisa.android.wallet.models.Inscription;
 
@@ -22,7 +22,7 @@ public class DbInscription  extends SQLiteOpenHelper {
     private static final String KEY_NUMBER="number";
     private static final String KEY_EMAIL="email";
     private static final String KEY_PASSWORD="password";
-    public DbInscription(@Nullable @android.support.annotation.Nullable Context context, @Nullable @android.support.annotation.Nullable String name, @Nullable @android.support.annotation.Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public DbInscription(@android.support.annotation.Nullable Context context, @android.support.annotation.Nullable String name,  @android.support.annotation.Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 

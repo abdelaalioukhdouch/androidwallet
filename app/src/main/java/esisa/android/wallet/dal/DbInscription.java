@@ -64,5 +64,14 @@ public class DbInscription  extends SQLiteOpenHelper {
         }
        return  false;
     }
+    public boolean Login(String email,String pass) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String select_query = "select * from " + TABLE_INSCRIPTION + " where email =" + email+ " and password ="+pass;
+        Cursor cursor = db.rawQuery(select_query, null);
+        if (cursor.moveToFirst()) {
+            return true;
+        }
+        return  false;
+    }
 }
 

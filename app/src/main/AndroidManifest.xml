@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="esisa.android.wallet">
 
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="true"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/icone"
@@ -9,18 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <!--activity android:name=".MainActivity" /-->
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/AppTheme.NoActionBar">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+         </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar">
+
         </activity>
+        <activity android:name=".Signup">
+
+        </activity>
+
         <!--activity android:name=".Signup" />
+
+
         <activity
             android:name=".AddProjectsActivity"
             android:label="@string/title_activity_projects"

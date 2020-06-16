@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 
+import androidx.annotation.Nullable;
 
 import esisa.android.wallet.models.Inscription;
 
@@ -22,7 +23,13 @@ public class DbInscription  extends SQLiteOpenHelper {
     private static final String KEY_NUMBER="number";
     private static final String KEY_EMAIL="email";
     private static final String KEY_PASSWORD="password";
-    public DbInscription(@android.support.annotation.Nullable Context context, @android.support.annotation.Nullable String name,  @android.support.annotation.Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    private static final String KEY_CONFIRM_PASSWORD = "confrim_password";
+
+
+
+
+    public DbInscription(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+
         super(context, DB_NAME, null, DB_VERSION);
     }
 
@@ -34,6 +41,7 @@ public class DbInscription  extends SQLiteOpenHelper {
                         + KEY_FULLNAME + " varchar(30),"
                         +KEY_NUMBER + " varchar(30),"
                         +KEY_EMAIL + " varchar(30),"
+                        +KEY_CONFIRM_PASSWORD + " varchar(30),"
                         +KEY_PASSWORD + " varchar(30)"
                         +")";
         db.execSQL(create_table);
@@ -44,7 +52,7 @@ public class DbInscription  extends SQLiteOpenHelper {
         db.execSQL("drop table if exists "+TABLE_INSCRIPTION);
         onCreate(db);
     }
-    public void addInscription(Inscription inscription){
+    public Boolean addInscription(Inscription inscription){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values= new ContentValues();
         //values.put(KEY_ID,contact.getId());
@@ -52,8 +60,14 @@ public class DbInscription  extends SQLiteOpenHelper {
         values.put(KEY_NUMBER,inscription.getNumber());
         values.put(KEY_EMAIL,inscription.getEmail());
         values.put(KEY_PASSWORD,inscription.getPassword());
-        db.insert(TABLE_INSCRIPTION,null,values);
-        Log.e("e","addContact dans dbContact"+values.toString());
+        values.put(KEY_CONFIRM_PASSWORD, inscription.getCpassword());
+        long result = db.insert(TABLE_INSCRIPTION,null,values);
+       if(result == -1){
+           return false;
+       }else{
+           return  true;
+       }
+
     }
     public boolean getInscriptionByEmail(String email) {
         SQLiteDatabase db = this.getReadableDatabase();
@@ -73,5 +87,7 @@ public class DbInscription  extends SQLiteOpenHelper {
         }
         return  false;
     }
+
+
 }
 

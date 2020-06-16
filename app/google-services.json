@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "64428391495",
+    "firebase_url": "https://androidwallet-9482f.firebaseio.com",
+    "project_id": "androidwallet-9482f",
+    "storage_bucket": "androidwallet-9482f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64428391495:android:64800c5f12b16bacb90562",
+        "android_client_info": {
+          "package_name": "esisa.android.wallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64428391495-2fvamim5ahcaan8anf54lauktkbu1g1t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "esisa.android.wallet",
+            "certificate_hash": "81f7214844c61e861d65d030cd6d5c7febb58c0a"
+          }
+        },
+        {
+          "client_id": "64428391495-oobbq81m6941i0uavudfh01sgtvl8iit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwl-DULlDVLbvvD_Rjim9aa9kfD8ou5F4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64428391495-oobbq81m6941i0uavudfh01sgtvl8iit.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

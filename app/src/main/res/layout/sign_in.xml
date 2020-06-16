@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,6 +21,7 @@
         android:ems="10"
         android:fontFamily="monospace"
         android:hint="Login"
+
         android:inputType="textPersonName"
         android:selectAllOnFocus="false"
         android:singleLine="false"
@@ -71,7 +72,7 @@
         app:layout_constraintVertical_bias="0.066"
         app:srcCompat="@drawable/icone" />
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:id="@+id/cardlogin"
         android:layout_width="101dp"
         android:layout_height="31dp"
@@ -100,7 +101,7 @@
             android:textColor="#ffffff"
             android:textSize="14sp"
             android:textStyle="bold" />
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/signupbt"
@@ -113,7 +114,7 @@
         android:background="#00444422"
         android:elevation="0dp"
         android:fontFamily="monospace"
-        android:text="___Sign in___"
+        android:text="___Sign up___"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="12sp"
@@ -125,4 +126,4 @@
 
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

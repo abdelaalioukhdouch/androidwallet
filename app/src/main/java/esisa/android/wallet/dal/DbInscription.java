@@ -11,7 +11,8 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-import esisa.android.wallet.models.Inscription;
+
+import esisa.android.wallet.models.Utilisateur;
 
 public class DbInscription  extends SQLiteOpenHelper {
     private static final String DB_NAME="INSCRIPTION_DB";
@@ -52,7 +53,7 @@ public class DbInscription  extends SQLiteOpenHelper {
         db.execSQL("drop table if exists "+TABLE_INSCRIPTION);
         onCreate(db);
     }
-    public Boolean addInscription(Inscription inscription){
+    public Boolean addInscription(Utilisateur inscription){
         SQLiteDatabase db=this.getWritableDatabase();
         ContentValues values= new ContentValues();
         //values.put(KEY_ID,contact.getId());

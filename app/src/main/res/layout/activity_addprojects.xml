@@ -8,7 +8,7 @@
     android:background="@drawable/gradiant">
 
     <EditText
-        android:id="@+id/editTexttitle"
+        android:id="@+id/nameProject"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -50,7 +50,7 @@
         app:srcCompat="@drawable/addimg" />
 
     <EditText
-        android:id="@+id/editTextperiod"
+        android:id="@+id/periodeProject"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -72,7 +72,7 @@
         app:layout_constraintVertical_bias="0.399" />
 
     <EditText
-        android:id="@+id/editTextBudget"
+        android:id="@+id/budgetPeriode"
         android:layout_width="wrap_content"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextDesc"
+        android:id="@+id/descritpionProject"
         android:layout_width="207dp"
         android:layout_height="118dp"
         android:layout_marginBottom="8dp"
@@ -130,34 +130,16 @@
         app:layout_constraintVertical_bias="0.135"
         app:srcCompat="@android:drawable/toast_frame" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardlogin"
-        android:layout_width="114dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:cardBackgroundColor="@color/colorAccent"
-        app:cardCornerRadius="10dp"
-        app:cardElevation="10dp"
+    <Button
+        android:id="@+id/btnAddedPrjt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.922">
-
-        <TextView
-            android:id="@+id/signup"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="6dp"
-            android:fontFamily="monospace"
-            android:text="Add project"
-            android:textAlignment="center"
-            android:textColor="#ffffff"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintVertical_bias="0.897" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

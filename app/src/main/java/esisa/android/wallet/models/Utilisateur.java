@@ -1,17 +1,18 @@
 package esisa.android.wallet.models;
 
-public class Inscription {
+public class Utilisateur {
+
     private String fullname;
     private String number;
     private String email;
     private String password;
     private String cpassword;
 
-    public Inscription() {
+
+    public Utilisateur() {
     }
 
-    public Inscription(String fullname, String number, String email, String password, String cpassword) {
-
+    public Utilisateur(String fullname, String number, String email, String password, String cpassword) {
         this.fullname = fullname;
         this.number = number;
         this.email = email;
@@ -57,16 +58,5 @@ public class Inscription {
 
     public void setCpassword(String cpassword) {
         this.cpassword = cpassword;
-    }
-
-    @Override
-    public String toString() {
-        return "Inscription{" +
-                "fullname='" + fullname + '\'' +
-                ", number='" + number + '\'' +
-                ", email='" + email + '\'' +
-                ", password='" + password + '\'' +
-                ", cpassword='" + cpassword + '\'' +
-                '}';
     }
 }

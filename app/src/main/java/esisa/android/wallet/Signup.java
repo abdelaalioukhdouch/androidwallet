@@ -21,7 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 
 import esisa.android.wallet.dal.DbInscription;
-import esisa.android.wallet.models.Inscription;
+
+import esisa.android.wallet.models.Utilisateur;
 
 public class Signup extends AppCompatActivity {
 
@@ -30,7 +31,7 @@ public class Signup extends AppCompatActivity {
     private ImageView userPicture;
     private FloatingActionButton btnAddPicture;
     public DbInscription dbInscription;
-    public Inscription userInscription;
+    public Utilisateur userInscription;
 
 
     //Firebase code
@@ -100,7 +101,9 @@ public class Signup extends AppCompatActivity {
        if(password.getText().toString().equals(confirmPassword.getText().toString())) {
            if(email.getText().toString().contains("@") && email.getText().toString().contains(".com")){
                // clear();
-               Inscription userInscription = new Inscription();
+              // Inscription userInscription = new Inscription();
+               Utilisateur userInscription = new Utilisateur();
+
                userInscription.setFullname(name.getText().toString().trim());
                userInscription.setNumber(phoneNumber.getText().toString().trim());
                userInscription.setEmail(email.getText().toString().trim());
